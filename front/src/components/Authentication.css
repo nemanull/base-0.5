@@ -1,0 +1,199 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4d1cf; /* Matches the background color of your image */
+    background-image: url('../assets/background.png'); /* Replace with your image file path */
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: auto;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    min-height: calc(100vh - 200px); /* Adjust 200px to match your image height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem; /* Added padding for mobile responsiveness */
+    box-sizing: border-box;
+}
+
+/* -------- Authentication Section -------- */
+.auth-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.auth-container h1 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Flexbox container for buttons */
+.auth-buttons {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 1rem; /* Space between buttons */
+    margin-top: 1.5rem;
+}
+
+/* Button styles */
+.auth-buttons button {
+    padding: 10px 20px;
+    background-color: #4caf50; /* Default color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-buttons button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Phantom Wallet button styling */
+.auth-buttons button.phantom {
+    background-color: #6c5ce7; /* Purple for Phantom Wallet */
+}
+
+.auth-buttons button.phantom:hover {
+    background-color: #5a4bdb;
+}
+
+/* Paragraph styles */
+.auth-container p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.auth-container p.error {
+    color: red;
+    font-weight: bold;
+}
+
+.h1_auth{
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.p_auth{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .auth-container {
+        padding: 1.5rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 0.75rem;
+    }
+
+    .auth-buttons button {
+        width: 100%; /* Full-width buttons for smaller screens */
+    }
+}
+
+/* -------- Main Section Styles -------- */
+.main-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.main-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Creators Container */
+.creators-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Space between items */
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 600px; /* Fixed height, adjust as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 900px; /* Optional: Set a fixed width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.creator-box {
+    min-width: unset; /* Remove horizontal constraints */
+    height: 100px; /* Height of each box */
+    background: #e0e0e0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.creator-box:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+
+.creator-box p {
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.subscribe-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments for Main Section */
+@media (max-width: 768px) {
+    .creators-container {
+        flex-direction: column;
+        overflow-x: hidden;
+        align-items: center;
+    }
+
+    .creator-box {
+        width: 80%;
+        min-width: unset;
+    }
+}
